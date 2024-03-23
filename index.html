@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Portal</title>
+<link rel="stylesheet" href="styles3.css">  
+</head>
+
+<body>
+
+    <div class="clglogo">
+        <div id="im"><img src="logo.jpg" alt="">
+            </div>
+            <div id="clgname">VEERMATA JIJABAI TECHNOLOGICAL INSTITUTE</div>
+                
+                <script>
+                     const collegeName = "Your College Name";
+                    const collegeNameElement = document.getElementById('college-name');
+                    let index = 0;
+              
+                    function type() 
+                    {
+                        collegeNameElement.textContent += collegeName[index];
+                        index++;
+                        if (index >= collegeName.length) 
+                        {
+                            index = 0;
+                             return;
+                        }
+
+                        setTimeout(type, 200); // Adjust the typing speed (in milliseconds) here
+                    }
+                    type();
+                </script>
+        
+    </div>
+
+<div class="container">
+    
+        <h1>Welcome to the Registration Portal</h1>
+    <p>Are you a student or a teacher?</p>
+    
+
+    <div id= "option"> 
+        <button onclick="location.href='student_login.html'">Student</button>
+        <button onclick="location.href='teacher_login.html'">Teacher</button>
+    </div>
+
+    
+
+</div>
+
+</body>
+
+<footer>
+    <div class="fcontainer">
+        <div class="footer-grid">
+          <a href="#">University Page</a>
+          <a href="#">Contact Us</a>
+          <a href="#">About University</a>
+         
+        </div>
+      </div>
+
+    <p>&copy; 2024 Registration Portal. All rights reserved.</p>
+</footer>
+</html>

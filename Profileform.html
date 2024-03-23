@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> profile form</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <h4> VJTI Registration Portal </h4>
+    </header>
+
+    <div id="big"> 
+        <div class="small">
+            <img src="image.png" height="150px">
+            <h4> Registration number: <br> 240001</h4>
+            <h3>
+                Complete Your profile <br> 
+            </h3>
+           
+            <form id = "regform" action="#" method="post">
+                <label for="name"></label>
+                <input type="text" name="Name" id="name" placeholder="Enter your name" required> <br>
+                <label for="email"></label>
+                <input type="email" name="Email" id="email" placeholder="Enter your email"required><br>
+                <label for="DOB"></label>
+                <input type="date" name="DOB" id="DOB" placeholder="Enter your Date of Birth"required></input><br>
+                <label for="branch"></label>
+                <select id="branch" name="branch"required>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="IT Engineering">IT Engineering</option>
+                    <option value="Electronics Engineering">Electronics Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Textile Engineering">Textile Engineering</option>
+                  </select><br>
+                <label for="number"></label>
+                <input type="number" name="number" id="number" placeholder="Enter your Contact Number"></input><br>
+
+                <button type="submit" class="btn">Submit</button>
+
+            </form>
+
+            <script>
+                document.getElementById("regform").addEventListener("submit", function(event) {
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var DOB = document.getElementById("DOB").value;
+                    var branch = document.getElementById("branch").value;
+                    var number = document.getElementById("number").value;
+            
+                    if (!name || !email || !DOB || !branch || !number) {
+                        alert("Please fill in all fields.");
+                        event.preventDefault();
+                        return;
+                    } else if (!validateEmail(email)) {
+                        alert("Please enter a valid email address.");
+                        event.preventDefault();
+                        return;
+                    } else if (!validatePhoneNumber(number)) {
+                        alert("Please enter a valid 10-digit phone number.");
+                        event.preventDefault();
+                        return;
+                    }
+
+            fetch("http://localhost:3000/regform", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+                },
+            body: JSON.stringify({name, email, DOB, branch, number})
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                alert("Details updated successfully!"); // Display the response message
+                // Redirect to student dashboard if login successful
+                    window.location.href = "student_dashboard.html";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred while logging in.");
+                window.location.href = "profileform.html";
+            });
+           
+        });      
+                function validateEmail(email) {
+                    // Regular expression for basic email validation
+                    var re = /\S+@\S+\.\S+/;
+                    return re.test(email);
+                }
+            
+                function validatePhoneNumber(number) {
+                    // Regular expression to match exactly 10 digits
+                    var regex = /^\d{10}$/;
+                    // Test the input against the regular expression
+                    return regex.test(number);
+                }
+            
+                function clearForm() {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("DOB").value = "";
+                    document.getElementById("branch").selectedIndex = 0;
+                    document.getElementById("number").value = "";
+                }
+                
+            </script>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="fcontainer">
+        <div class="footer-grid">
+          <a href="#">University Page</a>
+          <a href="#">Contact Us</a>
+          <a href="#">About University</a>
+         
+        </div>
+      </div>
+
+    <p>&copy; 2024 Registration Portal. All rights reserved.</p>
+</footer>
+</html>

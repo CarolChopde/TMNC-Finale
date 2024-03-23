@@ -1,0 +1,247 @@
+body{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("bg2anim.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+ }
+ 
+ #header{
+     height: 60px;
+     background-color: rgb(30, 41, 53);
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-wrap: wrap;
+     text-align: center;
+     
+ }
+
+ 
+ a{
+     text-decoration: none;
+      color: white;
+ }
+
+ 
+ 
+ 
+ #main
+ { color: whitesmoke;
+     background-color: #0097fc20;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     display: flex;
+     justify-content: space-around;
+     padding: 10%;
+     align-items: center;
+ }
+ img
+ {
+     border-radius: 50%;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+ }
+ #events
+ {
+     color: whitesmoke;
+     background-color: #0097fc20;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     display: flex;
+     justify-content: space-around;
+     padding: 10%;
+     align-items: center;
+ }
+ .text
+ {
+     color: whitesmoke;
+     background-color:#ffffff20;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     height: 150px;
+     padding: 15%;
+     align-items: center;
+
+ }
+
+ .container {
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 10%;
+  padding: 20px;
+  background-color: rgba(48, 46, 46, 0.581);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#main
+{
+margin: 5%;
+padding: 5%;
+}
+
+
+h1 {
+  margin-top: 30px;
+  font-size: 60px;
+   color: #fff;
+}
+h2{
+  color:white;
+}
+
+p{
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #0b3bc9;
+  cursor: pointer;
+}
+button:hover {
+  color: #5d7084;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #0029a2;
+  cursor: pointer;
+}
+.form-group button:hover {
+  color: #506f90;
+}
+
+.form-group button a{
+  color: blue;
+}
+
+.update-form-container{
+  background-color: lightgray;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  margin: 10% 10% 10% 10%;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+  
+}
+
+.form2-group{
+  margin: 1%;
+  text-align:center;
+  justify-content: space-evenly;
+
+}
+
+p{
+  font-size: 15px;
+}
+
+
+  #facimg{
+    width: 50px;
+    height: 50px;
+    align-content: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+  padding: 20px 0;
+    text-align: center;
+    width:100%;
+  }
+  
+  .fcontainer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    /* grid-gap: 10px; */
+  }
+  
+ footer-grid a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  border-top: 2px solid transparent;
+  transition: border-top 0.3s ease;
+}
+
+  
+  .footer-grid a:hover {
+    border-top: 2px solid #fff;
+  }
+  
+  #clgname{
+    color: white;
+    padding-top: 70px;
+    padding-right: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    overflow: hidden;
+    /* border-right: .1em solid orange; */
+    animation: typing 5s steps(40) infinite;
+    white-space: nowrap;
+    margin: 0 auto;
+    /* padding: 10px 0; */
+    text-align: center;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  } 
+.clglogo{
+    height: 200px;
+    display: flex;
+}
+.clglogo img
+{
+    height: 110px;
+    width: 110px ;
+    border-radius:30px;
+}

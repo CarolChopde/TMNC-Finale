@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Reg</title>
+
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <h4> VJTI Registration Portal </h4>
+    </header>
+
+    <div id="big"> 
+        <div class="small">
+            <img src="image.png" height="150px">
+            <h4> Registration number: <br> 240001</h4>
+            <h3>
+                Select Your Courses <br> 
+            </h3>
+           
+            <form action="#" method="post" id="form">
+                
+                <label for="sub1"></label>
+                <select id="sub1" name="sub1" placeholder="Select 1st Subject">
+                    <option value="math">Applied Mathematics</option>
+                    <option value="phy">Engineering Physics</option>
+                    <option value="em">Engineering Mechanics</option>
+                    <option value="cpp">Computer Programming</option>
+                    <option value="chem">Applied Chemistry</option>
+                    <option value="bee">Basic Electrical Engineering</option>
+                   
+                    <!-- Add more options as needed -->
+                  </select><br>
+               
+                  <label for="sub2"></label>
+                  <select id="sub2" name="sub1" placeholder="Select 2nd Subject">
+                      <option value="math">Applied Mathematics</option>
+                      <option value="phy">Engineering Physics</option>
+                      <option value="em">Engineering Mechanics</option>
+                      <option value="cpp">Computer Programming</option>
+                      <option value="chem">Applied Chemistry</option>
+                      <option value="bee">Basic Electrical Engineering</option>
+                     
+                      <!-- Add more options as needed -->
+                    </select><br>
+                
+                    <label for="sub3"></label>
+                    <select id="sub3" name="sub1" placeholder="Select 3rd Subject">
+                        <option value="math">Applied Mathematics</option>
+                        <option value="phy">Engineering Physics</option>
+                        <option value="em">Engineering Mechanics</option>
+                        <option value="cpp">Computer Programming</option>
+                        <option value="chem">Applied Chemistry</option>
+                        <option value="bee">Basic Electrical Engineering</option>
+                       
+                        <!-- Add more options as needed -->
+                      </select><br>
+
+                      <label for="sub4"></label>
+                      <select id="sub4" name="sub4" >
+                          <option value="math" placeholder="Select 4th Subject">Applied Mathematics</option>
+                          <option value="phy">Engineering Physics</option>
+                          <option value="em">Engineering Mechanics</option>
+                          <option value="cpp">Computer Programming</option>
+                          <option value="chem">Applied Chemistry</option>
+                          <option value="bee">Basic Electrical Engineering</option>
+                         
+                          <!-- Add more options as needed -->
+                        </select><br>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+
+            <script> document.getElementById("contactForm").addEventListener("submit", function (event) {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var date = document.getElementById("dob").value;
+                var branch = document.getElementById("branch").value;
+                var number = document.getElementById("number").value;
+
+                if (!name || !email || !dob ||!branch || !number) {
+                    alert("Please fill in all fields.");
+                   event.preventDefault();
+                } else 
+                {
+                    alert("Form submitted successfully!\nName: " + name + "\nEmail: " + email + "\ndob: " + dob + "\nbranch" + "\nnumber");
+
+                }
+            });
+            function validateEmail(email) {
+                // Regular expression for basic email validation
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+
+            function validatePhoneNumber(phoneNumber) 
+            {
+                // Regular expression to match exactly 10 digits
+                var regex = /^\d{10}$/;
+                
+                // Test the input against the regular expression
+                if (regex.test(phoneNumber)) {
+                    return true; // Phone number is valid
+                } else {
+                    return false; // Phone number is not valid
+                }
+            }
+
+            function clearForm() {
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("dob").value = "";
+                document.getElementById("branch").value = "";
+                document.getElementById("number").value = "";
+            }
+        </script>
+        </div>
+    </div>
+
+</body>
+</html>

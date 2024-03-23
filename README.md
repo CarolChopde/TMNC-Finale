@@ -1,2 +1,2 @@
-# TMNC-Finale
-Student registration portal
+# TMNC-
+TMNC registration portal
